@@ -1,7 +1,13 @@
+import { Hero } from '@/components/hero'
+import { Projects } from '@/components/projects'
+import { Services } from '@/components/services'
+
 export default function HomePage() {
-  return (
-    <div>
-      <h1>Hello Vercel!</h1>
-    </div>
-  );
+    return (
+        <main>
+            <Hero />
+            <Services />
+            <Projects />
+        </main>
+    )
 }
