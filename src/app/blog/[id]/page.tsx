@@ -1,9 +1,13 @@
+'use client'
 
 import { blogPosts } from '@/data';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = blogPosts.find((p) => p.id === params.id);
+export default function BlogPostPage() {
+  const params = useParams();
+  const id = params.id as string;
+
+  const post = blogPosts.find((p) => p.id === id);
 
   if (!post) {
     notFound();
