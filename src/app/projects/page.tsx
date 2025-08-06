@@ -1,6 +1,7 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Award, Building, Globe, Leaf, Mountain, Zap } from 'lucide-react'
+import Link from 'next/link'
 
 export default function ProjectsPage() {
     const projects = [
@@ -238,12 +239,12 @@ export default function ProjectsPage() {
                                 Contact our team of experts for consultation and
                                 support on your environmental and safety needs.
                             </p>
-                            <a
+                            <Link
                                 href="/contact"
                                 className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                             >
                                 Contact Us
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

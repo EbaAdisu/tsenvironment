@@ -1,4 +1,5 @@
 import { companyInfo } from '@/data'
+import Link from 'next/link'
 import {
     Award,
     Globe,
@@ -248,12 +249,12 @@ export default function AboutPage() {
                                     for that we have a proven track record. For
                                     any information regarding our services and
                                     products please feel free to{' '}
-                                    <a
+                                    <Link
                                         href="/contact"
                                         className="text-green-600 hover:text-green-700 underline"
                                     >
                                         contact us
-                                    </a>
+                                    </Link>
                                     , and we will gladly respond to you on time.
                                 </p>
                             </div>
@@ -268,12 +269,12 @@ export default function AboutPage() {
                                     and support on your environmental and safety
                                     needs.
                                 </p>
-                                <a
+                                <Link
                                     href="/contact"
                                     className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                                 >
                                     Contact Us
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

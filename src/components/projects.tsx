@@ -1,8 +1,5 @@
 'use client'
 
-import { Badge } from '@/components/ui/badge'
-import { projectsData } from '@/data'
-import { Badge } from '@/components/ui/badge'
 import {
     Card,
     CardContent,
@@ -10,6 +7,7 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card'
+import { projectsData } from '@/data'
 
 export function Projects() {
     return (
@@ -55,7 +53,7 @@ export function Projects() {
 
                 <div className="text-center mt-12">
                     <p className="text-muted-foreground mb-4">
-                        We've successfully completed hundreds of projects across
+                        We&apos;ve successfully completed hundreds of projects across
                         multiple sectors
                     </p>
                 </div>

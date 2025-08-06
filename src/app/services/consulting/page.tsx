@@ -108,7 +108,7 @@ export default function ConsultingPage() {
                                     positive conservation outcomes.
                                 </p>
                                 <p className="mb-4">
-                                    TS Environment's team is notable for
+                                    TS Environment&apos;s team is notable for
                                     hands-on biodiversity expertise developed
                                     through a broad range of backgrounds.
                                     Combining a clear biodiversity and ecosystem
@@ -235,7 +235,7 @@ export default function ConsultingPage() {
                                     noise for a variety of situations. With our
                                     extensive experience of real-life noise
                                     control applications, we feel we offer a
-                                    service that can't be matched by others.
+                                    service that can&apos;t be matched by others.
                                 </p>
                             </div>
 
@@ -396,7 +396,7 @@ export default function ConsultingPage() {
                                 <p>
                                     Our staff uses data collected by our survey
                                     team and publicly available through spatial
-                                    database's. We integrate both survey data
+                                    database&apos;s. We integrate both survey data
                                     and spatial data using GIS software and
                                     AutoCad create maps and study trends for any
                                     project. The maps we produces meets our
@@ -442,7 +442,7 @@ export default function ConsultingPage() {
                                     environmental issues related to air, water,
                                     and pollution prevention and control. We
                                     specialize in the following services areas
-                                    to support your company's environmental
+                                    to support your company&apos;s environmental
                                     operations:
                                 </p>
                                 <ul className="list-disc list-inside space-y-2">

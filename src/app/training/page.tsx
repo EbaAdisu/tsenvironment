@@ -35,8 +35,8 @@ export default function TrainingPage() {
                                 offer more than 30 safety and
                                 Environment-related courses at our different
                                 training centers. Our highly experienced
-                                "Safety, Environment and sustanability Expert
-                                Team" comprises over 27 leading professionals
+                                &quot;Safety, Environment and sustanability Expert
+                                Team&quot; comprises over 27 leading professionals
                                 with more than 15 years of experience in making
                                 a healthier and safer workplace environment. We
                                 provide individuals with improved employment
@@ -82,7 +82,7 @@ export default function TrainingPage() {
                                     OSH Certificate is ideal for managers,
                                     Engineers, supervisors and anybody with
                                     Safety and Health management
-                                    responsibilities. It's also perfect for
+                                    responsibilities. It&apos;s also perfect for
                                     those embarking on a health and safety
                                     career and gives you a stepping stone to
                                     success.

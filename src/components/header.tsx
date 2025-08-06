@@ -58,7 +58,7 @@ export function Header() {
                                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-[.75fr_1fr] lg:w-[600px]">
                                             <li className="row-span-3">
                                                 <NavigationMenuLink asChild>
-                                                    <a
+                                                    <Link
                                                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                                                         href="/services"
                                                     >
@@ -72,12 +72,12 @@ export function Header() {
                                                             consulting and
                                                             safety solutions.
                                                         </p>
-                                                    </a>
+                                                    </Link>
                                                 </NavigationMenuLink>
                                             </li>
                                             <li>
                                                 <NavigationMenuLink asChild>
-                                                    <a
+                                                    <Link
                                                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                                         href="/services/consulting"
                                                     >
@@ -92,12 +92,12 @@ export function Header() {
                                                             compliance and
                                                             safety management.
                                                         </p>
-                                                    </a>
+                                                    </Link>
                                                 </NavigationMenuLink>
                                             </li>
                                             <li>
                                                 <NavigationMenuLink asChild>
-                                                    <a
+                                                    <Link
                                                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                                         href="/services/management"
                                                     >
@@ -111,12 +111,12 @@ export function Header() {
                                                             and compliance
                                                             support.
                                                         </p>
-                                                    </a>
+                                                    </Link>
                                                 </NavigationMenuLink>
                                             </li>
                                             <li>
                                                 <NavigationMenuLink asChild>
-                                                    <a
+                                                    <Link
                                                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                                                         href="/training"
                                                     >
@@ -131,7 +131,7 @@ export function Header() {
                                                             for workplace safety
                                                             and sustainability.
                                                         </p>
-                                                    </a>
+                                                    </Link>
                                                 </NavigationMenuLink>
                                             </li>
                                         </ul>

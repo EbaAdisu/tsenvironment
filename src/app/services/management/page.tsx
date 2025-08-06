@@ -8,6 +8,7 @@ import {
     Trash2,
     Users,
 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function ManagementPage() {
     return (
@@ -48,10 +49,10 @@ export default function ManagementPage() {
                                     TS Environment operates an Environmental
                                     Management Service (EMS) department, under
                                     the guidance of the relevant laws of the
-                                    land, company's business strategy and plan,
-                                    Environmental Policy, and some international
-                                    references/standards where they are
-                                    appropriate (like ISO 14001). The
+                                    land, company&apos;s business strategy and
+                                    plan, Environmental Policy, and some
+                                    international references/standards where
+                                    they are appropriate (like ISO 14001). The
                                     Environmental Policy is periodically
                                     reviewed/audited and updated. In general,
                                     functions of the Environmental Management
@@ -270,12 +271,12 @@ export default function ManagementPage() {
                                     environmental management and safety
                                     services.
                                 </p>
-                                <a
+                                <Link
                                     href="/contact"
                                     className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                                 >
                                     Contact Us
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

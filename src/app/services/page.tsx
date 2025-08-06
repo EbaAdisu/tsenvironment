@@ -1,20 +1,7 @@
-import { Footer } from '@/components/footer'
-import { Header } from '@/components/header'
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card'
-import {
-    Award,
-    GraduationCap,
-    Leaf,
-    Shield,
-    TestTube,
-    Users,
-} from 'lucide-react'
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Award, GraduationCap, Leaf, Shield, TestTube, Users } from 'lucide-react'
+import Link from 'next/link'
 
 const services = [
     {
@@ -85,7 +72,6 @@ const comingSoonServices = [
 export default function ServicesPage() {
     return (
         <div className="min-h-screen">
-            <Header />
             <main>
                 {/* Hero Section */}
                 <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
@@ -297,24 +283,23 @@ export default function ServicesPage() {
                                 support on your environmental and safety needs
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a
+                                <Link
                                     href="/contact"
                                     className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
                                 >
                                     Contact Us
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/training"
                                     className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
                                 >
                                     View Training Programs
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
-            <Footer />
         </div>
     )
 }
