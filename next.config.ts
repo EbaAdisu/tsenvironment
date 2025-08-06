@@ -1,9 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
-  transpilePackages: ['tw-animate-css'],
-  /* config options here */
-};
+    output: 'standalone',
+    /* config options here */
+}
 
-export default nextConfig;
+export default nextConfig
