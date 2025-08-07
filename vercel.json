@@ -1,13 +1,23 @@
 {
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_VERCEL_ENV": "$VERCEL_ENV"
+    "buildCommand": "npm run build",
+    "outputDirectory": ".next",
+    "framework": "nextjs",
+    "installCommand": "npm install",
+    "devCommand": "npm run dev",
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                }
+            ]
+        }
+    ],
+    "functions": {
+        "app/**/*.tsx": {
+            "maxDuration": 30
+        }
     }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ]
 }
