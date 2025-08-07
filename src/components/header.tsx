@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/navigation-menu'
 import { Leaf, Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export function Header() {
@@ -22,9 +23,13 @@ export function Header() {
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                            <Leaf className="h-6 w-6 text-primary-foreground" />
-                        </div>
+                        <Image
+                            src="/TS-Environment-Technology-Logo-New.png"
+                            alt="TS Environment Technology Logo"
+                            width={40}
+                            height={40}
+                            className="h-10 w-10"
+                        />
                         <span className="text-xl font-bold text-primary">
                             TS Environment Technology
                         </span>

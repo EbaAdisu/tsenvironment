@@ -3,6 +3,7 @@
 import { Separator } from '@/components/ui/separator'
 import { Globe, Leaf, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Footer() {
     return (
@@ -12,9 +13,13 @@ export function Footer() {
                     {/* Company Info */}
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                                <Leaf className="h-5 w-5 text-primary-foreground" />
-                            </div>
+                            <Image
+                                src="/TS-Environment-Technology-Logo-New.png"
+                                alt="TS Environment Technology Logo"
+                                width={32}
+                                height={32}
+                                className="h-8 w-8"
+                            />
                             <span className="text-lg font-bold text-primary">
                                 TS Environment Technology
                             </span>
