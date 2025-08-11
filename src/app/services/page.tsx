@@ -1,6 +1,19 @@
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Award, GraduationCap, Leaf, Shield, TestTube, Users } from 'lucide-react'
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card'
+import {
+    Award,
+    GraduationCap,
+    Leaf,
+    Shield,
+    TestTube,
+    Users,
+} from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const services = [
@@ -100,6 +113,29 @@ export default function ServicesPage() {
                                 safety services
                             </p>
                         </div>
+
+                        {/* Service Images Section */}
+                        <div className="mb-16">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div className="relative h-80 rounded-lg overflow-hidden">
+                                    <Image
+                                        src="/images/services/About-Us-TS-Environment-Technology.png"
+                                        alt="TS Environment Services"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div className="relative h-80 rounded-lg overflow-hidden">
+                                    <Image
+                                        src="/images/services/TS-Environment-Technology-Core-Values.png"
+                                        alt="Core Values"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                             {services.map((service, index) => {
                                 const IconComponent = service.icon
@@ -153,6 +189,61 @@ export default function ServicesPage() {
                                     </Card>
                                 )
                             })}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Environmental Studies Showcase */}
+                <section className="py-20 bg-muted/30">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl font-bold mb-4">
+                                Environmental Studies
+                            </h2>
+                            <p className="text-xl text-muted-foreground">
+                                Comprehensive environmental assessments and
+                                studies
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="relative h-80 rounded-lg overflow-hidden">
+                                <Image
+                                    src="/images/services/Water-Resource-Study-TS-Environment-Technology-Addis-Ababa-Ethiopia.jpg"
+                                    alt="Water Resource Study"
+                                    fill
+                                    className="object-cover"
+                                />
+                                <div className="absolute inset-0 bg-black/40 flex items-end">
+                                    <div className="p-6 text-white">
+                                        <h3 className="text-xl font-bold mb-2">
+                                            Water Resource Studies
+                                        </h3>
+                                        <p className="text-sm">
+                                            Comprehensive water resource
+                                            assessment and management
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="relative h-80 rounded-lg overflow-hidden">
+                                <Image
+                                    src="/images/services/Air-Quality-Study-TS-Environment-Technology-Company-Addis-Ababa-Ethiopia.jpg"
+                                    alt="Air Quality Study"
+                                    fill
+                                    className="object-cover"
+                                />
+                                <div className="absolute inset-0 bg-black/40 flex items-end">
+                                    <div className="p-6 text-white">
+                                        <h3 className="text-xl font-bold mb-2">
+                                            Air Quality Studies
+                                        </h3>
+                                        <p className="text-sm">
+                                            Air quality monitoring and
+                                            assessment services
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -296,6 +387,91 @@ export default function ServicesPage() {
                                     View Training Programs
                                 </Link>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Safety Equipment Section */}
+                <section className="py-20">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl font-bold mb-4">
+                                Safety Equipment & Products
+                            </h2>
+                            <p className="text-xl text-muted-foreground">
+                                Professional safety equipment and protection
+                                products
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm hover:scale-105 overflow-hidden">
+                                <div className="relative h-48 overflow-hidden">
+                                    <Image
+                                        src="/images/services/fall-protection-products-supplier-in-ethiopia.jpg"
+                                        alt="Fall Protection Equipment"
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                </div>
+                                <CardHeader>
+                                    <CardTitle className="text-lg">
+                                        Fall Protection
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <CardDescription className="text-sm leading-relaxed">
+                                        Comprehensive fall protection equipment
+                                        and systems for workplace safety.
+                                    </CardDescription>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm hover:scale-105 overflow-hidden">
+                                <div className="relative h-48 overflow-hidden">
+                                    <Image
+                                        src="/images/services/head-protection-products-supplier-in-ethiopia.jpg"
+                                        alt="Head Protection Equipment"
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                </div>
+                                <CardHeader>
+                                    <CardTitle className="text-lg">
+                                        Head Protection
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <CardDescription className="text-sm leading-relaxed">
+                                        Professional head protection equipment
+                                        including helmets and hard hats.
+                                    </CardDescription>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm hover:scale-105 overflow-hidden">
+                                <div className="relative h-48 overflow-hidden">
+                                    <Image
+                                        src="/images/services/hearing-protection-products-supplier-in-ethiopia.jpg"
+                                        alt="Hearing Protection Equipment"
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-300"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                </div>
+                                <CardHeader>
+                                    <CardTitle className="text-lg">
+                                        Hearing Protection
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <CardDescription className="text-sm leading-relaxed">
+                                        Advanced hearing protection equipment
+                                        for noise control and safety.
+                                    </CardDescription>
+                                </CardContent>
+                            </Card>
                         </div>
                     </div>
                 </section>

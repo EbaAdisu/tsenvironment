@@ -1,5 +1,6 @@
 import { trainingCourses } from '@/data'
 import { BookOpen, GraduationCap, Shield, Users } from 'lucide-react'
+import Image from 'next/image'
 
 export default function TrainingPage() {
     return (
@@ -24,6 +25,20 @@ export default function TrainingPage() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <div className="prose prose-lg max-w-none">
+                            {/* Training Images Section */}
+                            <div className="mb-12">
+                                <div className="flex justify-center">
+                                    <div className="relative h-64 w-full max-w-2xl rounded-lg overflow-hidden bg-white">
+                                        <Image
+                                            src="/images/training/Occupational-Safety-and-Health-OSH-Training-for-SIEMENS-Ethiopia-Project-TS-Environment-Technology-Addis-Ababa-Ethiopia.jpg"
+                                            alt="SIEMENS Training"
+                                            fill
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
                             <p className="text-lg leading-relaxed mb-8">
                                 <strong>
                                     Sami Safety and sustainability (3S)
@@ -35,14 +50,14 @@ export default function TrainingPage() {
                                 offer more than 30 safety and
                                 Environment-related courses at our different
                                 training centers. Our highly experienced
-                                &quot;Safety, Environment and sustanability Expert
-                                Team&quot; comprises over 27 leading professionals
-                                with more than 15 years of experience in making
-                                a healthier and safer workplace environment. We
-                                provide individuals with improved employment
-                                opportunities and access to specialized
-                                internationally accepted safety, Environment and
-                                sustainability training.
+                                &quot;Safety, Environment and sustanability
+                                Expert Team&quot; comprises over 27 leading
+                                professionals with more than 15 years of
+                                experience in making a healthier and safer
+                                workplace environment. We provide individuals
+                                with improved employment opportunities and
+                                access to specialized internationally accepted
+                                safety, Environment and sustainability training.
                             </p>
 
                             {/* What We Provide */}

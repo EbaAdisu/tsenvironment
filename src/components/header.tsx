@@ -10,8 +10,8 @@ import {
     NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 import { Leaf, Menu, X } from 'lucide-react'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 
 export function Header() {
@@ -22,17 +22,17 @@ export function Header() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center space-x-2">
+                    <Link href="/" className="flex items-center space-x-3">
                         <Image
-                            src="/TS-Environment-Technology-Logo-New.png"
+                            src="/images/logos/TS-Environment-Technology-Logo-New.png"
                             alt="TS Environment Technology Logo"
-                            width={40}
-                            height={40}
-                            className="h-10 w-10"
+                            width={50}
+                            height={50}
+                            className="h-12 w-auto object-contain"
                         />
-                        <span className="text-xl font-bold text-primary">
+                        {/* <span className="text-xl font-bold text-primary">
                             TS Environment Technology
-                        </span>
+                        </span> */}
                     </Link>
 
                     {/* Desktop Navigation */}

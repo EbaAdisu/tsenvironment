@@ -1,11 +1,11 @@
-import { Hero } from '@/components/hero'
+import { HeroSlider } from '@/components/hero-slider'
 import { Projects } from '@/components/projects'
 import { Services } from '@/components/services'
 
 export default function HomePage() {
     return (
         <main>
-            <Hero />
+            <HeroSlider />
             <Services />
             <Projects />
         </main>

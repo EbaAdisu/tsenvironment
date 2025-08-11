@@ -1,5 +1,4 @@
 import { companyInfo } from '@/data'
-import Link from 'next/link'
 import {
     Award,
     Globe,
@@ -8,6 +7,8 @@ import {
     Target,
     TrendingUp,
 } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function AboutPage() {
     const coreValues = [
@@ -171,6 +172,118 @@ export default function AboutPage() {
                                             </div>
                                         )
                                     })}
+                                </div>
+                            </div>
+
+                            {/* Our Team Section */}
+                            <div className="mb-12">
+                                <h2 className="text-3xl font-bold text-green-700 mb-6">
+                                    Our Team
+                                </h2>
+                                <div className="mb-8">
+                                    <div className="relative w-full h-96 rounded-lg overflow-hidden mb-6">
+                                        <Image
+                                            src="/images/people/OUR-PEOPLE-scaled.jpg"
+                                            alt="TS Environment Team"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <p className="text-lg leading-relaxed text-center">
+                                        Our dedicated team of environmental and
+                                        safety professionals brings together
+                                        decades of combined experience to
+                                        deliver exceptional results for our
+                                        clients.
+                                    </p>
+                                </div>
+
+                                {/* Training Sessions */}
+                                <div className="mb-8">
+                                    <h3 className="text-2xl font-bold text-green-700 mb-4">
+                                        Training & Development
+                                    </h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div className="relative h-64 rounded-lg overflow-hidden">
+                                            <Image
+                                                src="/images/people/Training-1-scaled.jpg"
+                                                alt="Training Session 1"
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                        <div className="relative h-64 rounded-lg overflow-hidden">
+                                            <Image
+                                                src="/images/people/Training-2-scaled.jpg"
+                                                alt="Training Session 2"
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                        <div className="relative h-64 rounded-lg overflow-hidden">
+                                            <Image
+                                                src="/images/people/Training-3-scaled.jpg"
+                                                alt="Training Session 3"
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                        <div className="relative h-64 rounded-lg overflow-hidden">
+                                            <Image
+                                                src="/images/people/Training-4-scaled.jpg"
+                                                alt="Training Session 4"
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                    </div>
+                                    <p className="text-lg leading-relaxed text-center mt-6">
+                                        We invest in continuous training and
+                                        development to ensure our team stays at
+                                        the forefront of environmental and
+                                        safety practices.
+                                    </p>
+                                </div>
+
+                                {/* Team Members */}
+                                <div className="mb-8">
+                                    <h3 className="text-2xl font-bold text-green-700 mb-4">
+                                        Meet Our Experts
+                                    </h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div className="text-center">
+                                            <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                                                <Image
+                                                    src="/images/people/sam.png"
+                                                    alt="Team Member"
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                            <h4 className="font-semibold text-green-700">
+                                                Samuel Hailu
+                                            </h4>
+                                            <p className="text-sm text-gray-600">
+                                                Founder & CEO
+                                            </p>
+                                        </div>
+                                        <div className="text-center">
+                                            <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                                                <Image
+                                                    src="/images/people/ram.png"
+                                                    alt="Team Member"
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                            <h4 className="font-semibold text-green-700">
+                                                Ram
+                                            </h4>
+                                            <p className="text-sm text-gray-600">
+                                                Senior Consultant
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 

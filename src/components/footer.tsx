@@ -1,9 +1,9 @@
 'use client'
 
 import { Separator } from '@/components/ui/separator'
-import { Globe, Leaf, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link'
+import { Globe, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function Footer() {
     return (
@@ -153,6 +153,40 @@ export function Footer() {
 
                 <Separator className="my-8" />
 
+                {/* Partners Section */}
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div className="text-center mb-8">
+                        <h3 className="text-lg font-semibold mb-4">
+                            Our Partners & Clients
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                            Trusted by leading organizations across various
+                            sectors
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap justify-center items-center gap-8">
+                        <div className="flex items-center justify-center w-32 h-16">
+                            <Image
+                                src="/images/partners/Africa-Oil-Corp.jpg"
+                                alt="Africa Oil Corporation"
+                                width={120}
+                                height={60}
+                                className="max-w-full max-h-full object-contain"
+                            />
+                        </div>
+                        <div className="flex items-center justify-center w-32 h-16">
+                            <Image
+                                src="/images/partners/EC-Logo-e1685703522288.png"
+                                alt="EthioChicken"
+                                width={120}
+                                height={60}
+                                className="max-w-full max-h-full object-contain"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <Separator />
                 {/* Bottom Section */}
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     <div className="flex items-center space-x-4">
