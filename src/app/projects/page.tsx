@@ -1,5 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { getYearsInBusiness } from '@/lib/utils'
 import { Award, Building, Globe, Leaf, Mountain, Zap } from 'lucide-react'
 import Link from 'next/link'
 
@@ -142,7 +143,7 @@ export default function ProjectsPage() {
                                 </div>
                                 <div className="text-center p-6 bg-green-50 rounded-lg">
                                     <div className="text-3xl font-bold text-green-600 mb-2">
-                                        18+
+                                        {getYearsInBusiness()}
                                     </div>
                                     <div className="text-sm text-gray-600">
                                         Years Experience

@@ -5,6 +5,7 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card'
+import { getYearsInBusiness } from '@/lib/utils'
 import { Award, GraduationCap, Leaf, Shield, Users } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -251,7 +252,8 @@ export default function ServicesPage() {
                                             <Award className="h-12 w-12 text-primary" />
                                         </div>
                                         <CardTitle>
-                                            18+ Years Experience
+                                            {getYearsInBusiness()} Years
+                                            Experience
                                         </CardTitle>
                                     </CardHeader>
                                     <CardContent>

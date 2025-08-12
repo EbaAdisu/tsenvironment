@@ -1,11 +1,13 @@
 import { companyInfo } from '@/data'
+import { getYearsInBusiness } from '@/lib/utils'
 import {
     Award,
-    Globe,
+    BookOpen,
     Heart,
-    Lightbulb,
+    Shield,
     Target,
     TrendingUp,
+    Users,
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,51 +15,45 @@ import Link from 'next/link'
 export default function AboutPage() {
     const coreValues = [
         {
-            title: 'Integrity',
-            description:
-                'we observe and follow legal, ethical and moral standards.',
-            icon: Award,
-        },
-        {
-            title: 'Transparency',
-            description:
-                'we foster an open and frank engagement with our clients, regulators and among our employee.',
-            icon: Globe,
-        },
-        {
             title: 'Excellence',
             description:
-                'we strive to produce a superior product and service at every juncture.',
+                'We strive for excellence in everything we do, delivering the highest quality services to our clients.',
             icon: Award,
         },
         {
-            title: 'Safety',
+            title: 'Integrity',
             description:
-                'We not only provide safety as our product, we do live by it. It is our first consideration before we embark on any activity.',
-            icon: Target,
-        },
-        {
-            title: 'Passion and Devotion',
-            description:
-                'We love what we do and we practice that by paying attention to every little detail.',
-            icon: Heart,
+                'We conduct our business with honesty, transparency, and ethical practices.',
+            icon: Shield,
         },
         {
             title: 'Innovation',
             description:
-                'we aspire to be the best by being ahead of the curve and employing cutting-edge technology.',
-            icon: Lightbulb,
+                'We embrace innovation and continuously improve our methods and technologies.',
+            icon: TrendingUp,
         },
         {
-            title: 'Entrepreneurial Spirit',
+            title: 'Sustainability',
             description:
-                'A passion for constant improvement and a drive to capitalize on opportunities to meet our vision.',
-            icon: TrendingUp,
+                'We are committed to sustainable practices and environmental stewardship.',
+            icon: Heart,
+        },
+        {
+            title: 'Collaboration',
+            description:
+                'We work together with clients, partners, and stakeholders to achieve common goals.',
+            icon: Users,
+        },
+        {
+            title: 'Learning',
+            description:
+                'We foster a culture of continuous learning and professional development.',
+            icon: BookOpen,
         },
     ]
 
     const keyFacts = [
-        { number: '18+', label: 'Years in Business' },
+        { number: getYearsInBusiness(), label: 'Years in Business' },
         { number: '500+', label: 'Successful Projects' },
         { number: '50+', label: 'Multi-national Clients Served' },
         { number: '13', label: 'Business Sectors' },

@@ -9,6 +9,7 @@ import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
+import { getYearsInBusiness } from '@/lib/utils'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/navigation'
@@ -127,7 +128,7 @@ export function HeroSlider() {
                                                     <Award className="h-12 w-12 text-white" />
                                                 </div>
                                                 <h3 className="text-2xl font-bold mb-2 text-white">
-                                                    18+ Years
+                                                    {getYearsInBusiness()} Years
                                                 </h3>
                                                 <p className="text-white/80">
                                                     In Business

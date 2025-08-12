@@ -1,9 +1,10 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import { companyInfo } from '@/data'
+import { getYearsInBusiness } from '@/lib/utils'
 import { ArrowRight, Award, Shield, Users } from 'lucide-react'
 import Link from 'next/link'
-import { companyInfo } from '@/data'
 
 export function Hero() {
     return (
@@ -45,7 +46,7 @@ export function Hero() {
                                 <Award className="h-12 w-12 text-primary" />
                             </div>
                             <h3 className="text-2xl font-bold mb-2">
-                                18+ Years
+                                {getYearsInBusiness()} Years
                             </h3>
                             <p className="text-muted-foreground">In Business</p>
                         </div>
