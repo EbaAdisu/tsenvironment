@@ -5,14 +5,7 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card'
-import {
-    Award,
-    GraduationCap,
-    Leaf,
-    Shield,
-    TestTube,
-    Users,
-} from 'lucide-react'
+import { Award, GraduationCap, Leaf, Shield, Users } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -69,16 +62,6 @@ const services = [
         ],
         color: 'text-emerald-600',
         link: '/training',
-    },
-]
-
-const comingSoonServices = [
-    {
-        title: 'Environmental Laboratory Services',
-        description:
-            'Our laboratory has been certified by the Ethiopian National Accreditation Office (ENAO). We are currently in the process of expanding our services to meet international standards, including ISO/IEC 17025 accreditation. While these services are not yet fully operational, we are actively working to bring them online soon.',
-        icon: TestTube,
-        status: 'Coming Soon',
     },
 ]
 
@@ -244,54 +227,6 @@ export default function ServicesPage() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Coming Soon Services */}
-                <section className="py-20 bg-muted/30">
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold mb-4">
-                                Coming Soon
-                            </h2>
-                            <p className="text-xl text-muted-foreground">
-                                Services we are actively working to bring online
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {comingSoonServices.map((service, index) => {
-                                const IconComponent = service.icon
-                                return (
-                                    <Card
-                                        key={index}
-                                        className="border-0 bg-card/50 backdrop-blur-sm opacity-75"
-                                    >
-                                        <CardHeader>
-                                            <div className="flex items-center space-x-3">
-                                                <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                                                    <IconComponent className="h-6 w-6" />
-                                                </div>
-                                                <div>
-                                                    <CardTitle className="text-lg">
-                                                        {service.title}
-                                                    </CardTitle>
-                                                    <div className="mt-2">
-                                                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                                                            {service.status}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <CardDescription className="text-sm leading-relaxed">
-                                                {service.description}
-                                            </CardDescription>
-                                        </CardContent>
-                                    </Card>
-                                )
-                            })}
                         </div>
                     </div>
                 </section>

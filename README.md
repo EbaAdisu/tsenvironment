@@ -118,7 +118,7 @@ npm run dev
 ### From Original Website
 
 -   ✅ Company branding and messaging
--   ✅ Service offerings (Consulting, Training, Laboratory, ESG)
+-   ✅ Service offerings (Consulting, Training, ESG)
 -   ✅ Featured projects showcase
 -   ✅ Contact information
 -   ✅ Professional navigation structure
