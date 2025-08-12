@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Calculate years in business dynamically
-export function getYearsInBusiness(foundingYear: number = 2004): string {
+export function getYearsInBusiness(foundingYear: number = 2005): string {
     const currentYear = new Date().getFullYear()
     const years = currentYear - foundingYear
     return `${years}+`
