@@ -1,94 +1,18 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+    getFeaturedProjects,
+    getProjectCategories,
+    getProjectStats,
+    projectsData,
+} from '@/data/projects'
 import { getYearsInBusiness } from '@/lib/utils'
-import { Award, Building, Globe, Leaf, Mountain, Zap } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ProjectsPage() {
-    const projects = [
-        {
-            title: 'ESIA Study for Africa Oil Ethiopia Hamessa 1 Exploratory Drilling',
-            client: 'Africa Oil Ethiopia B.V',
-            category: 'ESIA Studies',
-            year: '2023',
-            description:
-                'Comprehensive environmental and social impact assessment for exploratory drilling operations.',
-            icon: Globe,
-        },
-        {
-            title: 'ESG Action Plan Implementation for YES Food and Beverages Brands',
-            client: 'YES Food and Beverages',
-            category: 'ESG Implementation',
-            year: '2023',
-            description:
-                'Environmental, Social, and Governance action plan development and implementation.',
-            icon: Leaf,
-        },
-        {
-            title: 'RAPID Biodiversity Study for Reykjavik Geothermal Tulu Moye Project',
-            client: 'Reykjavík Geothermal / VSO Consulting',
-            category: 'Biodiversity Studies',
-            year: '2023',
-            description:
-                'Rapid biodiversity assessment for geothermal power project development.',
-            icon: Leaf,
-        },
-        {
-            title: 'ESIA Study for Calub-Hilala Gas Gathering and Treatment operations',
-            client: 'China Petroleum Pipeline Engineering Company (CPPEC)',
-            category: 'ESIA Studies',
-            year: '2023',
-            description:
-                'Environmental impact assessment for gas gathering and treatment operations.',
-            icon: Globe,
-        },
-        {
-            title: 'Occupational Safety and Health (OSH) Training for SIEMENS Ethiopia',
-            client: 'SIEMENS Ethiopia',
-            category: 'Training',
-            year: '2023',
-            description:
-                'Comprehensive occupational safety and health training program implementation.',
-            icon: Award,
-        },
-        {
-            title: 'Study of 132kV Transmission Line at Preparatory Survey on the Project for ALTO LANGANO 35 MW Geothermal Power Generation in Ethiopia',
-            client: 'West Japan Engineering Consultants, INC',
-            category: 'Infrastructure Studies',
-            year: '2023',
-            description:
-                'Transmission line study for geothermal power generation project.',
-            icon: Zap,
-        },
-        {
-            title: 'Baseline Environmental Study for Corbetti Geothermal Project, Phase 1 Operations',
-            client: 'Corbetti Geothermal',
-            category: 'Environmental Studies',
-            year: '2023',
-            description:
-                'Baseline environmental assessment for geothermal project operations.',
-            icon: Mountain,
-        },
-        {
-            title: 'Environmental Impact Assessment for ASCOM Mining Ethiopia Dish Mountain Gold Project',
-            client: 'ASCOM Mining Ethiopia',
-            category: 'Mining EIA',
-            year: '2023',
-            description:
-                'Environmental impact assessment for gold mining project.',
-            icon: Building,
-        },
-    ]
-
-    const projectCategories = [
-        { name: 'ESIA Studies', count: 2, icon: Globe },
-        { name: 'Biodiversity Studies', count: 1, icon: Leaf },
-        { name: 'ESG Implementation', count: 1, icon: Leaf },
-        { name: 'Training', count: 1, icon: Award },
-        { name: 'Infrastructure Studies', count: 1, icon: Zap },
-        { name: 'Environmental Studies', count: 1, icon: Mountain },
-        { name: 'Mining EIA', count: 1, icon: Building },
-    ]
+    const stats = getProjectStats()
+    const categories = getProjectCategories()
+    const featuredProjects = getFeaturedProjects()
 
     return (
         <div className="min-h-screen bg-background">
@@ -119,7 +43,7 @@ export default function ProjectsPage() {
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                                 <div className="text-center p-6 bg-green-50 rounded-lg">
                                     <div className="text-3xl font-bold text-green-600 mb-2">
-                                        500+
+                                        {stats.totalProjects}+
                                     </div>
                                     <div className="text-sm text-gray-600">
                                         Successful Projects
@@ -158,7 +82,7 @@ export default function ProjectsPage() {
                                 Project Categories
                             </h2>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                {projectCategories.map((category, index) => {
+                                {categories.map((category, index) => {
                                     const IconComponent = category.icon
                                     return (
                                         <Card
@@ -191,11 +115,11 @@ export default function ProjectsPage() {
                                 Featured Projects
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {projects.map((project, index) => {
+                                {featuredProjects.map((project, index) => {
                                     const IconComponent = project.icon
                                     return (
                                         <Card
-                                            key={index}
+                                            key={project.id}
                                             className="border-green-200 hover:shadow-lg transition-all"
                                         >
                                             <CardHeader>
@@ -224,6 +148,74 @@ export default function ProjectsPage() {
                                                 <p className="text-sm text-gray-600">
                                                     {project.description}
                                                 </p>
+                                                <div className="mt-3">
+                                                    <Badge
+                                                        variant="secondary"
+                                                        className="text-xs"
+                                                    >
+                                                        {project.type}
+                                                    </Badge>
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                    )
+                                })}
+                            </div>
+                        </div>
+
+                        {/* All Projects Section */}
+                        <div className="mt-16">
+                            <h2 className="text-3xl font-bold text-green-700 mb-8">
+                                All Projects ({stats.totalProjects})
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {projectsData.map((project) => {
+                                    const IconComponent = project.icon
+                                    return (
+                                        <Card
+                                            key={project.id}
+                                            className="border-green-200 hover:shadow-lg transition-all"
+                                        >
+                                            <CardHeader>
+                                                <div className="flex items-center justify-between mb-2">
+                                                    <Badge
+                                                        variant="outline"
+                                                        className="text-xs"
+                                                    >
+                                                        {project.category}
+                                                    </Badge>
+                                                    <span className="text-xs text-gray-500">
+                                                        {project.year}
+                                                    </span>
+                                                </div>
+                                                <CardTitle className="text-base text-green-700">
+                                                    {project.title}
+                                                </CardTitle>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <div className="flex items-center mb-3">
+                                                    <IconComponent className="h-4 w-4 text-green-600 mr-2" />
+                                                    <span className="text-sm font-medium text-gray-700">
+                                                        {project.client}
+                                                    </span>
+                                                </div>
+                                                <p className="text-sm text-gray-600 mb-3">
+                                                    {project.description}
+                                                </p>
+                                                <div className="flex flex-wrap gap-1">
+                                                    <Badge
+                                                        variant="secondary"
+                                                        className="text-xs"
+                                                    >
+                                                        {project.type}
+                                                    </Badge>
+                                                    <Badge
+                                                        variant="outline"
+                                                        className="text-xs"
+                                                    >
+                                                        {project.folder}
+                                                    </Badge>
+                                                </div>
                                             </CardContent>
                                         </Card>
                                     )

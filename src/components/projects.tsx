@@ -7,7 +7,8 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card'
-import { projectsData } from '@/data'
+import { getFeaturedProjects, getProjectStats } from '@/data/projects'
+import { getYearsInBusiness } from '@/lib/utils'
 import Image from 'next/image'
 
 // Project images mapping
@@ -21,6 +22,9 @@ const projectImages = [
 ]
 
 export function Projects() {
+    const featuredProjects = getFeaturedProjects()
+    const stats = getProjectStats()
+
     return (
         <section className="py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,11 +39,11 @@ export function Projects() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projectsData.map((project, index) => {
+                    {featuredProjects.slice(0, 6).map((project, index) => {
                         const imageIndex = index % projectImages.length
                         return (
                             <Card
-                                key={index}
+                                key={project.id}
                                 className="group hover:shadow-xl transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm hover:scale-105 overflow-hidden"
                             >
                                 <div className="relative h-48 overflow-hidden">
@@ -66,6 +70,14 @@ export function Projects() {
                                     <CardDescription className="text-sm leading-relaxed">
                                         {project.description}
                                     </CardDescription>
+                                    <div className="mt-3 flex items-center justify-between">
+                                        <span className="text-xs text-muted-foreground">
+                                            {project.client}
+                                        </span>
+                                        <span className="text-xs text-muted-foreground">
+                                            {project.year}
+                                        </span>
+                                    </div>
                                 </CardContent>
                             </Card>
                         )
@@ -148,8 +160,12 @@ export function Projects() {
 
                 <div className="text-center mt-12">
                     <p className="text-muted-foreground mb-4">
-                        We&apos;ve successfully completed hundreds of projects
-                        across multiple sectors
+                        We&apos;ve successfully completed {stats.totalProjects}+
+                        projects across multiple sectors
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                        {getYearsInBusiness()} Years of Experience •{' '}
+                        {stats.totalProjects}+ Projects • 50+ Clients
                     </p>
                 </div>
             </div>
