@@ -24,15 +24,20 @@ export function Header() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-3">
                         <Image
-                            src="/images/logos/TS-Environment-Technology-Logo-New.png"
+                            src="/images/logos/TS-Logo-New.png"
                             alt="TS Environment Technology Logo"
-                            width={50}
-                            height={50}
-                            className="h-12 w-auto object-contain"
+                            width={60}
+                            height={60}
+                            className="h-14 w-auto object-contain"
                         />
-                        {/* <span className="text-xl font-bold text-primary">
-                            TS Environment Technology
-                        </span> */}
+                        <div className="flex flex-col">
+                            <span className="text-xl font-bold text-primary">
+                                TS Environment Technology
+                            </span>
+                            <span className="text-sm text-muted-foreground">
+                                Environmental Management & Consulting
+                            </span>
+                        </div>
                     </Link>
 
                     {/* Desktop Navigation */}
