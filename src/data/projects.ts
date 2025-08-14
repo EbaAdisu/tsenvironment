@@ -1,12 +1,12 @@
 import {
     Activity,
     Building,
+    Droplets,
+    Gauge,
     Globe,
     Leaf,
-    Mountain,
     Shield,
     Target,
-    Zap,
 } from 'lucide-react'
 
 // Import the extracted projects data
@@ -23,20 +23,18 @@ const getProjectIcon = (type: string) => {
             return Leaf
         case 'emp':
             return Target
-        case 'environmental audit':
-            return Activity
-        case 'biodiversity study':
+        case 'bd':
             return Leaf
-        case 'air quality study':
-            return Mountain
-        case 'water resource study':
-            return Globe
-        case 'noise study':
-            return Zap
-        case 'emission study':
-            return Building
         case 'wpa':
-            return Target
+            return Droplets
+        case 'air quality':
+            return Gauge
+        case 'emission':
+            return Building
+        case 'audit':
+            return Activity
+        case 'other':
+            return Building
         default:
             return Building
     }
@@ -45,7 +43,7 @@ const getProjectIcon = (type: string) => {
 // Process and enhance the extracted projects data
 export const projectsData = extractedProjects.projects.map((project) => ({
     id: project.id,
-    title: project.name,
+    title: project.title || project.name,
     client: project.client,
     category: project.category,
     type: project.type,
@@ -59,15 +57,17 @@ export const projectsData = extractedProjects.projects.map((project) => ({
 // Get project statistics
 export const getProjectStats = () => {
     const totalProjects = projectsData.length
-    const byCategory = extractedProjects.summary.byCategory
-    const byType = extractedProjects.summary.byType
-    const byYear = extractedProjects.summary.byYear
+    const byCategory = extractedProjects.stats.byCategory
+    const byType = extractedProjects.stats.byType
+    const byYear = extractedProjects.stats.byYear
+    const byClient = extractedProjects.stats.byClient
 
     return {
         totalProjects,
         byCategory,
         byType,
         byYear,
+        byClient,
     }
 }
 
@@ -86,6 +86,11 @@ export const getProjectsByYear = (year: string) => {
     return projectsData.filter((project) => project.year === year)
 }
 
+// Get projects by client
+export const getProjectsByClient = (client: string) => {
+    return projectsData.filter((project) => project.client === client)
+}
+
 // Get featured projects (first 12 projects)
 export const getFeaturedProjects = () => {
     return projectsData.slice(0, 12)
@@ -98,11 +103,39 @@ export const getRecentProjects = () => {
 
 // Get project categories with counts
 export const getProjectCategories = () => {
-    const categories = extractedProjects.summary.byCategory
+    const categories = extractedProjects.stats.byCategory
     return Object.entries(categories).map(([name, count]) => ({
         name,
         count,
         icon: getCategoryIcon(name),
+    }))
+}
+
+// Get project types with counts
+export const getProjectTypes = () => {
+    const types = extractedProjects.stats.byType
+    return Object.entries(types).map(([name, count]) => ({
+        name,
+        count,
+        icon: getProjectIcon(name),
+    }))
+}
+
+// Get project years with counts
+export const getProjectYears = () => {
+    const years = extractedProjects.stats.byYear
+    return Object.entries(years).map(([name, count]) => ({
+        name,
+        count,
+    }))
+}
+
+// Get project clients with counts
+export const getProjectClients = () => {
+    const clients = extractedProjects.stats.byClient
+    return Object.entries(clients).map(([name, count]) => ({
+        name,
+        count,
     }))
 }
 
@@ -115,9 +148,19 @@ const getCategoryIcon = (category: string) => {
             return Shield
         case 'ESG & Sustainability':
             return Leaf
-        case 'Environmental Studies':
-            return Mountain
-        case 'Environmental Services':
+        case 'Biodiversity Assessment':
+            return Leaf
+        case 'Environmental Management':
+            return Target
+        case 'Water Assessment':
+            return Droplets
+        case 'Air Quality':
+            return Gauge
+        case 'Audit & Compliance':
+            return Activity
+        case 'Due Diligence':
+            return Building
+        case 'Other Services':
             return Building
         default:
             return Building

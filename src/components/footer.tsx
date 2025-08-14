@@ -12,18 +12,23 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Company Info */}
                     <div className="space-y-4">
-                        <div className="flex items-center space-x-2">
+                        <Link href="/" className="flex items-center space-x-3">
                             <Image
-                                src="/TS-Environment-Technology-Logo-New.png"
+                                src="/images/logos/TS-Logo-New.png"
                                 alt="TS Environment Technology Logo"
-                                width={32}
-                                height={32}
-                                className="h-8 w-8"
+                                width={60}
+                                height={60}
+                                className="h-14 w-auto object-contain"
                             />
-                            <span className="text-lg font-bold text-primary">
-                                TS Environment Technology
-                            </span>
-                        </div>
+                            <div className="flex flex-col">
+                                <span className="text-xl font-bold text-primary">
+                                    TS Environment Technology
+                                </span>
+                                <span className="text-sm text-muted-foreground">
+                                    Environmental Management & Consulting
+                                </span>
+                            </div>
+                        </Link>
                         <p className="text-sm text-muted-foreground">
                             Leading environmental, social, health/safety, and
                             sustainability consulting services in Ethiopia since
