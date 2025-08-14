@@ -351,12 +351,6 @@ export default function ProjectsPage() {
                                                         >
                                                             {project.type}
                                                         </Badge>
-                                                        <Badge
-                                                            variant="outline"
-                                                            className="text-xs"
-                                                        >
-                                                            {project.folder}
-                                                        </Badge>
                                                     </div>
                                                 </CardContent>
                                             </Card>
