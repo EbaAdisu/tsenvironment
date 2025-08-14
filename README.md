@@ -201,4 +201,4 @@ For questions or support, please contact the development team.
 
 ---
 
-_Last updated: August 14, 2024 - Vercel deployment trigger_
+_Last updated: August 14, 2024 - Staging branch deployment trigger_
